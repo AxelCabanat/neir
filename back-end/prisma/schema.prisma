@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  id        Int     @id @default(autoincrement())
+  name      String  @db.VarChar(50)
+  password  String  @db.VarChar(255)
+  role      Int
+}
+
+model categories {
+  id        Int     @id @default(autoincrement())
+  name      String  @db.VarChar(50)
+  articles   articles[]
+}
+
+model articles {
+  id        Int     @id @default(autoincrement())
+  name      String  @db.VarChar(50)
+  category_id Int
+  support   String?  @db.VarChar(255)
+  order      String?  @db.Text
+  description String? @db.Text
+  picture      String?  @db.VarChar(50)
+  miniature   String? @db.VarChar(50)
+
+  category   categories @relation(fields: [category_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_category_id")
+
+  @@index([category_id], map: "fk_category_id")
+}
+
+model galeries {
+  id        Int     @id @default(autoincrement())
+  name      String  @db.VarChar(50)
+  cover     String?  @db.VarChar(100)
+  description String? @db.Text
+  picture      String?  @db.VarChar(50)
+  miniature   String? @db.VarChar(50)
+}
+

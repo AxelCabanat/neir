@@ -1,0 +1,83 @@
+
+# ----------------------------------------
+# CLOTHES ROUTES
+# ----------------------------------------​
+GET http://localhost:3001/api/clothes
+Content-Type: application/json
+
+##################
+
+GET http://localhost:3001/api/clothes/1
+Content-Type: application/json
+
+##################
+
+# ----------------------------------------
+# PROPS ROUTES
+# ----------------------------------------​
+GET http://localhost:3001/api/props
+Content-Type: application/json
+
+##################
+
+GET http://localhost:3001/api/props/1
+Content-Type: application/json
+
+##################
+
+# ----------------------------------------
+# SERIGRAPHIES ROUTES
+# ----------------------------------------​
+GET http://localhost:3001/api/serigraphies
+Content-Type: application/json
+
+##################
+
+GET http://localhost:3001/api/serigraphies/1
+Content-Type: application/json
+
+##################
+
+# ----------------------------------------
+# CUSTOM DESIGN ROUTES
+# ----------------------------------------​
+GET http://localhost:3001/api/customdesign
+Content-Type: application/json
+
+##################
+
+GET http://localhost:3001/api/customdesign/1
+Content-Type: application/json
+
+##################
+
+# ----------------------------------------
+# GALERIES ROUTES
+# ----------------------------------------​
+GET http://localhost:3001/api/galeries
+Content-Type: application/json
+
+##################
+
+GET http://localhost:3001/api/galeries/1
+Content-Type: application/json
+
+##################
+
+POST  http://localhost:3001/api/users/login
+Content-Type: application/json
+
+{
+    "name": "admin",
+    "password" : "rootroot"
+}
+
+##################
+
+POST  http://localhost:3001/api/articles/1
+Content-Type: application/json
+
+{
+    "name": "octagram"
+
+}

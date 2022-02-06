@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-black text-white;
+	}
+
+	.navbarLink {
+		@apply text-zinc-300 hover:text-white transition duration-500 hover:duration-500;
+	}
+}
